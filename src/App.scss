@@ -1,0 +1,80 @@
+@import "variables";
+@import "mixing";
+
+body {
+    @include body_center;
+    @include body_height;
+    background-color: $bgcolor
+}
+
+.todoList {
+    @include main_div
+}
+
+.inputDiv {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.inputDiv input {
+    width: 100%;
+    padding: 8px 10px;
+}
+
+.inputDiv button {
+    width: 100px;
+    padding: 8px 10px;
+    background-color: $teal;
+    color: $whiteColor;
+    border: 0;
+    margin-left: 10px;
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+.itemList {
+    width: 100%;
+
+    ul {
+        list-style: none;
+        padding: 0;
+        border-top: 1px solid #d1d1d1;
+
+        li {
+            padding: 10px 0 10px;
+            display: flex;
+            border-bottom: 1px solid #d1d1d1;
+            align-items: center;
+            position: relative;
+
+            .removeBtn {
+                background-color: #dc3545;
+                border: 0;
+                color: $whiteColor;
+                padding: 8px 10px;
+                border-radius: 4px;
+                position: absolute;
+                right: 0;
+            }
+
+            .update {
+                background-color: #28a745;
+                border: 0;
+                color: $whiteColor;
+                padding: 8px 10px;
+                border-radius: 4px;
+                margin-left: 5px;
+            }
+
+            input {
+                padding: 6px;
+                margin-left: 5px;
+            }
+        }
+
+
+
+
+    }
+}
